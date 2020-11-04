@@ -56,11 +56,13 @@ function Panel(props) {
                         </div>
                     </div>
                 </div>
-                {data ? data.map(item => {
-                    return (
-                        <Card item={item} />
-                    )
-                }) : <div>data not available</div>}
+                <div className="cardGrid">
+                    {data ? data.map(item => {
+                        return (
+                            <Card item={item} />
+                        )
+                    }) : <div>data not available</div>}
+                </div>
             </div>
             <div><span className="bottomHeading">Developed By: </span> Aditya Acharya</div>
         </div>
