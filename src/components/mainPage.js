@@ -31,7 +31,6 @@ function MainPage() {
             try {
                 const result = await apiCall;
                 setData(result.data);
-                console.log("result", result.data);
             } catch (err) {
                 console.log("err", err);
             }

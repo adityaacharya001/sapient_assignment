@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Card from './card';
 
 import "./style.css";
@@ -7,7 +7,6 @@ function Panel(props) {
     const { data, onSuccessClick,
         onLandSucessClick,
         onLaunchYearClick, success, landSuccess, launchYear } = props;
-    console.log("props", props)
 
     const yearButtons = () => {
         let arr = [];
@@ -40,10 +39,11 @@ function Panel(props) {
                             <div className="subSubHeading">Successful Launch</div>
                             <hr />
                             <div className="buttonGrid">
-                                <button className={success ? "infocus" : null} value={true} onClick={(e) => onSuccessClick(e)}>
+                                <button className={success == "true" ? "infocus" : null} value={"true"} onClick={(e) => onSuccessClick(e)}>
                                     True
                     </button>
-                                <button className={!success ? "infocus" : null} value={false} onClick={(e) => onSuccessClick(e)}>
+                                <button className={success == "false" ? "infocus" : null} value={"false"} onClick={(e) => onSuccessClick(e)}>
+                                    {console.log("success", success)}
                                     False
                     </button>
                             </div>
@@ -52,11 +52,13 @@ function Panel(props) {
                         <hr />
 
                         <div class="buttonGrid">
-                            <button className={landSuccess ? "infocus" : null} value={true} onClick={(e) => onLandSucessClick(e)}>
+                            <button className={landSuccess == "true" ? "infocus" : null} value={"true"} onClick={(e) => onLandSucessClick(e)}>
                                 True
                     </button>
-                            <button className={!landSuccess ? "infocus" : null} value={false} onClick={(e) => onLandSucessClick(e)}>
+                            <button className={landSuccess == "false" ? "infocus" : null} value={"false"} onClick={(e) => onLandSucessClick(e)}>
+                                {console.log("landSuccess", landSuccess)}
                                 False
+
                     </button>
                         </div>
                     </div>
