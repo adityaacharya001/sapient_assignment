@@ -25,6 +25,8 @@ function Panel(props) {
                     <div className="filters">
                         <div className="subHeading"> Filters</div>
                         <div className="subSubHeading">Launch Year</div>
+                        <hr />
+
                         <div className="buttonGrid">
                             {yearButtons().map(item => {
                                 return (
@@ -36,6 +38,7 @@ function Panel(props) {
                         </div>
                         <div>
                             <div className="subSubHeading">Successful Launch</div>
+                            <hr />
                             <div className="buttonGrid">
                                 <button className={success ? "infocus" : null} value={true} onClick={(e) => onSuccessClick(e)}>
                                     True
@@ -46,6 +49,8 @@ function Panel(props) {
                             </div>
                         </div>
                         <div className="subSubHeading">Successful Landing</div>
+                        <hr />
+
                         <div class="buttonGrid">
                             <button className={landSuccess ? "infocus" : null} value={true} onClick={(e) => onLandSucessClick(e)}>
                                 True

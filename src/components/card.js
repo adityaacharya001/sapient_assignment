@@ -6,7 +6,7 @@ import "./style.css";
 function Card({ item }) {
     return (
         <div className="card" key={item.flight_number}>
-            <img style={{ width: "220px" }} src={Demo} alt="mission_img" />
+            <img style={{ width: "200px" }} src={Demo} alt="mission_img" />
             <div className="subHeading spa">
                 {item.mission_name} # {item.flight_number}
 
@@ -14,14 +14,14 @@ function Card({ item }) {
             <div className="subSubHeading  spa">
                 Mission Ids
                 </div>
-            <div className="mission_ids spa">
+            <ul className="mission_ids spa">
                 {item.mission_id.map(i => {
                     return (
-                        <span>{i}</span>
+                        <li>{i}</li>
                     )
                 })}
 
-            </div>
+            </ul>
             <div className="section spa">
                 <span className="subSubHeading">Launch Year:</span>
                 {item.launch_year}
